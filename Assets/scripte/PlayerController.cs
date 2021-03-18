@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.EventSystems;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -51,6 +52,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
 
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
