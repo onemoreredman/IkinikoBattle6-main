@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStatus : MobStatus
 {
+    [SerializeField] private AudioSource DeathSound;
+
     protected override void OnDie() {
         base.OnDie();
+        if (DeathSound != null)
+        {
+            DeathSound.Play();
+        }
 
         StartCoroutine(GoToGameOverCoroutine());
     }
