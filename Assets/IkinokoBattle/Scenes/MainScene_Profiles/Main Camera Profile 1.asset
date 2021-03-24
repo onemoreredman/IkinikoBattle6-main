@@ -15,13 +15,13 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   mode:
     overrideState: 1
     value: 0
   intensity:
     overrideState: 1
-    value: 4
+    value: 1.2
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
